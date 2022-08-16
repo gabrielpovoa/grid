@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    /* overflow-x: hidden; */
+    scroll-padding-top: 8rem;
+}
+
+body {
+    background-color: #7159c1;
+    width: 100%;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+img {
+    width: 30rem;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+button {
+    border: none;
+    padding: .8rem;
+    border-radius: .8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .8;
+    transition: all .3s linear;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    /* grid-template-columns: repeat(3, 20rem)); */
+    grid-gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: "estimator help graph" "estimator bill quote" "link bill quote" "follow bill quote";
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    body {
+        padding-block: 40rem;
+    }
+    .container {
+        grid-template-areas: "estimator" "help" "graph" "bill" "quote" "link" "follow";
+    }
+}
+
+.container>div {
+    background-color: #778;
+    padding: 2rem 5%;
+    border-radius: .4rem;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.container .estimator {
+    background-color: #F1F1F1;
+    grid-area: estimator;
+}
+
+.container .estimator p:first-child {
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.container .estimator .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .estimator .item span {
+    color: #5c5c5c;
+}
+
+.container .estimator .item h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.container .estimator p:last-child {
+    text-align: center;
+    color: #5c5c5c;
+}
+
+.container .estimator .item h2 span {
+    font-size: 1.1rem;
+    color: #5c5c5c;
+}
+
+.container .estimator .item input {
+    all: unset;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15rem;
+    height: .4rem;
+    border-radius: 5px;
+    background-color: #3071a9;
+    outline: none;
+    margin: 2rem 0;
+}
+
+.container .link {
+    background-color: #F1F1F1;
+}
+
+.container .link .fa-link {
+    color: #7159c1;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    grid-area: link;
+}
+
+.container .link .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container .follow {
+    background-color: #F1F1F1;
+    grid-area: follow;
+}
+
+.container .follow .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .follow .item .logo {
+    background-color: #7159c1;
+    border-radius: 50%;
+}
+
+.container .follow .item .logo p {
+    font-size: 1.8rem;
+}
+
+.container .follow .item .content {
+    margin-left: .8rem;
+}
+
+.container .follow .item .content h2 {
+    font-size: 1.4rem;
+}
+
+.container .follow .item .content p {
+    font-size: .8rem;
+}
+
+.container .follow .item button {
+    border: .1rem solid red;
+    padding: .9rem;
+    cursor: pointer;
+}
+
+.container .get_help {
+    background-color: #e78851;
+    display: flex;
+    flex-direction: column;
+    grid-area: help;
+}
+
+.container .get_help .fa-coins {
+    font-size: 2rem;
+    color: #778;
+    margin-bottom: 2rem;
+}
+
+.container .get_help .item {
+    color: #FFFF;
+}
+
+.container .get_help .item h2 {
+    color: #F1F1F1;
+    font-size: 2rem;
+}
+
+.container .get_help .button {
+    margin-top: 3rem;
+}
+
+.container .get_help .button a {
+    text-decoration: underline;
+    font-size: 1.4rem;
+    color: #FFF;
+    margin-right: .4rem;
+}
+
+.container .get_help .button i {
+    font-size: 1.4rem;
+}
+
+.container .next_bill {
+    background-color: #F1F1F1;
+    grid-area: bill;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container .next_bill i {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #778;
+}
+
+.container .next_bill .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 6rem; */
+}
+
+.container .next_bill .item p {
+    color: #3071a9;
+}
+
+.container .next_bill .item h2 {
+    font-size: 3rem;
+    padding-block: 2rem;
+    font-weight: 800;
+}
+
+.container .next_bill .item span {
+    color: #5c5c5c;
+    font-size: .8rem;
+}
+
+.container .next_bill .content {
+    margin-top: 10rem;
+}
+
+.container .graphic {
+    background-color: #F1F1F1;
+    grid-area: graph;
+}
+
+.container .flexible_quote {
+    background-color: darkslategrey;
+    grid-area: quote;
+}
+
+.container .flexible_quote .item h2 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.container .flexible_quote .item .content {
+    border-top: .1rem solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .flexible_quote .item .content h1 {
+    font-size: 2.5rem;
+    padding-block: 2rem;
+}
+
+.container .flexible_quote .item .content h1 span {
+    font-size: 1.1rem;
+    color: #FFF;
+}
+
+.container .flexible_quote .item .content .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.container .flexible_quote .item .content .buttons button:first-child {
+    background-color: #7159c1;
+    color: #F1F1F1;
+}
+
+.container .flexible_quote .item .content .buttons button:last-child {
+    background-color: #3071a9;
+    color: #F1F1F1;
+}
